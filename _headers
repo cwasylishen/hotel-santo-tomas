@@ -1,0 +1,33 @@
+# Cloudflare Pages Cache & Security Headers
+
+# Fonts: immutable — cached forever
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Images: 30 days
+/images/*
+  Cache-Control: public, max-age=2592000
+
+# JS: 1 year
+/main.js
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML: 1 hour
+/*.html
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/es/
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/fr/
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# Security headers on everything
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
