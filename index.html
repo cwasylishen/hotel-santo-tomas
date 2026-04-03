@@ -84,6 +84,11 @@
     .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(13,26,15,0.92) 0%,rgba(13,26,15,0.55) 50%,rgba(13,26,15,0.2) 100%)}
     .hero-content{position:relative;z-index:10;width:100%;max-width:1200px;margin:0 auto;padding:100px 24px 60px}
     .hero-eyebrow{display:inline-block;font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(201,151,44,0.95);margin-bottom:16px;padding:5px 12px;border:1px solid rgba(201,151,44,0.4);border-radius:20px}
+    #weather-badge{display:none;align-items:center;gap:10px;margin-bottom:18px;font-size:0.82rem;color:rgba(255,255,255,0.78);font-weight:500;letter-spacing:0.01em}
+    #weather-badge.loaded{display:flex}
+    .weather-live{display:flex;align-items:center;gap:5px;font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.45)}
+    .weather-dot{width:6px;height:6px;border-radius:50%;background:#4ade80;flex-shrink:0;animation:wpulse 2.4s ease-in-out infinite}
+    @keyframes wpulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.35;transform:scale(0.8)}}
     .hero-title{font-family:var(--font-display);font-size:clamp(2.6rem,6vw,5rem);font-weight:700;line-height:1.08;color:#fff;letter-spacing:-0.02em;margin-bottom:20px;max-width:720px}
     .hero-title em{font-style:italic;color:rgba(201,151,44,0.95)}
     .hero-desc{font-size:clamp(1rem,2vw,1.15rem);color:rgba(255,255,255,0.82);max-width:560px;line-height:1.7;margin-bottom:36px}
@@ -319,6 +324,10 @@
   </div>
   <div class="hero-content">
     <span class="hero-eyebrow">San José, Costa Rica · Est. 1908</span>
+    <div id="weather-badge" aria-live="polite" aria-label="Current weather in San José">
+      <span id="weather-text"></span>
+      <span class="weather-live"><span class="weather-dot"></span>Live</span>
+    </div>
     <h1 class="hero-title">It Feels<br><em>Like Home</em></h1>
     <p class="hero-desc">A historic 1908 landmark hotel in the heart of Downtown San José, with lush tropical gardens, a sparkling pool, free hot breakfast, and genuine Costa Rican hospitality.</p>
     <div class="hero-actions">
