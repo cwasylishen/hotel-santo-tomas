@@ -87,6 +87,8 @@
     @media(min-width:640px){.nearby-grid{grid-template-columns:1fr 1fr}}
     @media(min-width:1024px){.nearby-grid{grid-template-columns:repeat(3,1fr)}}
     .nearby-card{background:var(--white);border:1.5px solid var(--border);border-radius:12px;padding:16px 18px;display:flex;align-items:center;gap:12px}
+    a.nearby-card{transition:border-color 0.2s,box-shadow 0.2s,transform 0.2s}
+    a.nearby-card:hover{border-color:var(--green);box-shadow:0 4px 16px rgba(26,92,42,0.12);transform:translateY(-2px)}
     .nearby-dot{width:8px;height:8px;border-radius:50%;background:var(--green);flex-shrink:0}
     .nearby-name{font-weight:600;font-size:0.9rem;color:var(--ink-2)}
     .nearby-cat{font-size:0.78rem;color:var(--muted)}
@@ -136,6 +138,8 @@
       <a href="index.html" class="nav-link">Home</a>
       <a href="rooms.html" class="nav-link">Rooms</a>
       <a href="amenities.html" class="nav-link">Amenities</a>
+      <a href="tours.html" class="nav-link">Tours</a>
+      <a href="car-rental.html" class="nav-link">Car Rental</a>
       <a href="contact.html" class="nav-link active">Contact</a>
       <div class="lang-switcher" aria-label="Language">
         <button class="lang-btn active" onclick="window.location='contact.html'">EN</button>
@@ -154,6 +158,8 @@
       <a href="index.html" class="mobile-nav-link">Home</a>
       <a href="rooms.html" class="mobile-nav-link">Rooms</a>
       <a href="amenities.html" class="mobile-nav-link">Amenities</a>
+      <a href="tours.html" class="mobile-nav-link">Tours</a>
+      <a href="car-rental.html" class="mobile-nav-link">Car Rental</a>
       <a href="contact.html" class="mobile-nav-link">Contact</a>
     </nav>
     <div class="mobile-lang-row">
@@ -251,18 +257,18 @@
     <h2 class="section-title">What's Around Us</h2>
     <p style="font-size:1rem;color:var(--muted);margin-top:12px;max-width:560px;line-height:1.7">Hotel Santo Tomás is perfectly positioned in Barrio Amón, San José's most charming historic neighborhood, walkable to everything.</p>
     <div class="nearby-grid" style="margin-top:28px">
-      <div class="nearby-card"><span class="nearby-dot" aria-hidden="true"></span><div><div class="nearby-name">National Theatre of Costa Rica</div><div class="nearby-cat">Culture · 8 min walk</div></div></div>
-      <div class="nearby-card"><span class="nearby-dot" aria-hidden="true"></span><div><div class="nearby-name">Museo Nacional</div><div class="nearby-cat">Museum · 10 min walk</div></div></div>
-      <div class="nearby-card"><span class="nearby-dot" aria-hidden="true"></span><div><div class="nearby-name">Museo de Jade</div><div class="nearby-cat">Museum · 10 min walk</div></div></div>
-      <div class="nearby-card"><span class="nearby-dot" aria-hidden="true"></span><div><div class="nearby-name">Museo de los Niños</div><div class="nearby-cat">Museum · 12 min walk</div></div></div>
-      <div class="nearby-card"><span class="nearby-dot" aria-hidden="true"></span><div><div class="nearby-name">Bus Station El Caribe</div><div class="nearby-cat">Transport · 7 min walk</div></div></div>
-      <div class="nearby-card"><span class="nearby-dot" aria-hidden="true"></span><div><div class="nearby-name">Bus Station 7-10</div><div class="nearby-cat">Transport · 7 min walk</div></div></div>
-      <div class="nearby-card"><span class="nearby-dot" aria-hidden="true"></span><div><div class="nearby-name">Café Mundo</div><div class="nearby-cat">Restaurant · 3 min walk</div></div></div>
-      <div class="nearby-card"><span class="nearby-dot" aria-hidden="true"></span><div><div class="nearby-name">Café Rojo</div><div class="nearby-cat">Café · 3 min walk</div></div></div>
-      <div class="nearby-card"><span class="nearby-dot" aria-hidden="true"></span><div><div class="nearby-name">La Esquina de Buenos Aires</div><div class="nearby-cat">Restaurant · 5 min walk</div></div></div>
-      <div class="nearby-card"><span class="nearby-dot" aria-hidden="true"></span><div><div class="nearby-name">Galería Namu</div><div class="nearby-cat">Art Gallery · 5 min walk</div></div></div>
-      <div class="nearby-card"><span class="nearby-dot" aria-hidden="true"></span><div><div class="nearby-name">Starbucks</div><div class="nearby-cat">Coffee · 4 min walk</div></div></div>
-      <div class="nearby-card"><span class="nearby-dot" aria-hidden="true"></span><div><div class="nearby-name">Juan Santamaría Airport</div><div class="nearby-cat">Airport · 25 min drive</div></div></div>
+      <a class="nearby-card" href="https://www.google.com/maps/search/?api=1&query=Teatro+Nacional+de+Costa+Rica+San+Jose" target="_blank" rel="noopener"><span class="nearby-dot" aria-hidden="true"></span><div><div class="nearby-name">National Theatre of Costa Rica</div><div class="nearby-cat">Culture · 8 min walk</div></div></a>
+      <a class="nearby-card" href="https://www.google.com/maps/search/?api=1&query=Museo+Nacional+de+Costa+Rica+San+Jose" target="_blank" rel="noopener"><span class="nearby-dot" aria-hidden="true"></span><div><div class="nearby-name">Museo Nacional</div><div class="nearby-cat">Museum · 10 min walk</div></div></a>
+      <a class="nearby-card" href="https://www.google.com/maps/search/?api=1&query=Museo+del+Jade+San+Jose+Costa+Rica" target="_blank" rel="noopener"><span class="nearby-dot" aria-hidden="true"></span><div><div class="nearby-name">Museo de Jade</div><div class="nearby-cat">Museum · 10 min walk</div></div></a>
+      <a class="nearby-card" href="https://www.google.com/maps/search/?api=1&query=Museo+de+los+Niños+San+Jose+Costa+Rica" target="_blank" rel="noopener"><span class="nearby-dot" aria-hidden="true"></span><div><div class="nearby-name">Museo de los Niños</div><div class="nearby-cat">Museum · 12 min walk</div></div></a>
+      <a class="nearby-card" href="https://www.google.com/maps/search/?api=1&query=Terminal+del+Caribe+San+Jose+Costa+Rica" target="_blank" rel="noopener"><span class="nearby-dot" aria-hidden="true"></span><div><div class="nearby-name">Bus Station El Caribe</div><div class="nearby-cat">Transport · 7 min walk</div></div></a>
+      <a class="nearby-card" href="https://www.google.com/maps/search/?api=1&query=Terminal+7-10+San+Jose+Costa+Rica" target="_blank" rel="noopener"><span class="nearby-dot" aria-hidden="true"></span><div><div class="nearby-name">Bus Station 7-10</div><div class="nearby-cat">Transport · 7 min walk</div></div></a>
+      <a class="nearby-card" href="https://www.google.com/maps/search/?api=1&query=Cafe+Mundo+San+Jose+Costa+Rica" target="_blank" rel="noopener"><span class="nearby-dot" aria-hidden="true"></span><div><div class="nearby-name">Café Mundo</div><div class="nearby-cat">Restaurant · 3 min walk</div></div></a>
+      <a class="nearby-card" href="https://www.google.com/maps/search/?api=1&query=Cafe+Rojo+San+Jose+Costa+Rica" target="_blank" rel="noopener"><span class="nearby-dot" aria-hidden="true"></span><div><div class="nearby-name">Café Rojo</div><div class="nearby-cat">Café · 3 min walk</div></div></a>
+      <a class="nearby-card" href="https://www.google.com/maps/search/?api=1&query=La+Esquina+de+Buenos+Aires+San+Jose+Costa+Rica" target="_blank" rel="noopener"><span class="nearby-dot" aria-hidden="true"></span><div><div class="nearby-name">La Esquina de Buenos Aires</div><div class="nearby-cat">Restaurant · 5 min walk</div></div></a>
+      <a class="nearby-card" href="https://www.google.com/maps/search/?api=1&query=Galeria+Namu+San+Jose+Costa+Rica" target="_blank" rel="noopener"><span class="nearby-dot" aria-hidden="true"></span><div><div class="nearby-name">Galería Namu</div><div class="nearby-cat">Art Gallery · 5 min walk</div></div></a>
+      <a class="nearby-card" href="https://www.google.com/maps/search/?api=1&query=Starbucks+Barrio+Amon+San+Jose+Costa+Rica" target="_blank" rel="noopener"><span class="nearby-dot" aria-hidden="true"></span><div><div class="nearby-name">Starbucks</div><div class="nearby-cat">Coffee · 4 min walk</div></div></a>
+      <a class="nearby-card" href="https://www.google.com/maps/search/?api=1&query=Juan+Santamaria+International+Airport+Costa+Rica" target="_blank" rel="noopener"><span class="nearby-dot" aria-hidden="true"></span><div><div class="nearby-name">Juan Santamaría Airport</div><div class="nearby-cat">Airport · 25 min drive</div></div></a>
     </div>
   </div>
 </section>
